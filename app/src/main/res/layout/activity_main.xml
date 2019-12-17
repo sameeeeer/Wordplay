@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/level1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="LEVEL"
+    android:layout_marginTop="20dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:textSize="31dp"
+    android:layout_marginBottom="41dp"
+    android:background="@drawable/buttonlayout"
+
+    />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_lvl"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/level1"
+      >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/btn"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOK"
+            android:background="@drawable/buttonlayout"
+            android:textColor="#fff"
+            android:textSize="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnclear"
+            android:background="@drawable/buttonlayout"
+            android:textColor="#fff"
+            android:textSize="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="clear"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/til_lvl"
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
